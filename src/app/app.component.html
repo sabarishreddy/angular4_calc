@@ -1,0 +1,44 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{title}}!
+  </h1>
+</div>
+<div align="center">
+    <form>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="form-group">
+        <input type="text" pattern=".*\d" #resultHandle value="" />
+      </div>
+    </div>
+    <div class="row">
+        <button class="col-md-1"  (click)="buttonEvent('7')">7</button>
+        <button class="col-md-1"  (click)="buttonEvent('8')">8</button>
+        <button class="col-md-1"  (click)="buttonEvent('9')">9</button>
+        <button class="col-md-1" (click)="resetForm()">C</button>
+        <button class="col-md-1" [operation-handle]="resultHandle">/</button>
+    </div>
+    <div class="row">
+        <button class="col-md-1"  (click)="buttonEvent('4')">4</button>
+        <button class="col-md-1"  (click)="buttonEvent('5')">5</button>
+        <button class="col-md-1"  (click)="buttonEvent('6')">6</button>
+        <button class="col-md-1" [operation-handle]="resultHandle">*</button>
+        <button class="col-md-1" disabled [operation-handle]="resultHandle">%</button>
+    </div>
+    <div class="row">
+        <button class="col-md-1" (click)="buttonEvent('1')">1</button>
+        <button class="col-md-1" (click)="buttonEvent('2')">2</button>
+        <button class="col-md-1" (click)="buttonEvent('3')">3</button>
+        <button class="col-md-1" [operation-handle]="resultHandle">-</button>
+        <button class="col-md-1" [operation-handle]="resultHandle">=</button>
+    </div>
+    <div class="row">
+        <button class="col-md-1" (click)="buttonEvent('0')">0</button>
+        <button class="col-md-1" disabled (click)="buttonEvent('.')">.</button>
+        <button class="col-md-1" [operation-handle]="resultHandle">+</button>
+        <button class="col-md-2" [operation-handle]="resultHandle">=</button>
+    </div>
+  </div>
+</form>
+</div>
